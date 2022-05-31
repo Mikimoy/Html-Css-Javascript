@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    background-color: darkgrey;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+}
+/*logo*/
+.jirama{
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(56, 95, 202, 0.849);
+}
+
+.jirama span{
+    padding: 0 1px;
+    font-family: 'Rubik Wet Paint', cursive;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    color: brown;
+}
+
+/*menu*/
+nav ul{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 3px;
+    list-style: none;
+    width: 40%;
+    justify-content: space-around;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*Menu Toggle*/
+.menu-toggle{
+    display: flex;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(201, 0, 0);
+    border-radius: 3px;
+}
+
+
+
+
+/*Responsive tablet*/
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/*Responsive Mobile*/
+@media screen and (max-width: 600px){
+    nav{
+        justify-content: space-between;
+    }
+    nav ul {
+        display: none;
+    }
+}

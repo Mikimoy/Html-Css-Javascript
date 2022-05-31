@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Outher Space</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="text/css" href="images/fav-icon.PNG"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!--import font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!--Header-->
+	<header>
+		<div class="space">
+			<h1>Space</h1>
+    <p>Space is the zone above and around our planet where there is no air to breathe or to scatter light.</p>
+		</div>
+		<!--navigation-->
+	<nav class="navigation">
+		<input type="checkbox" class="menu-btn" id="menu-btn">
+		<label for="menu-btn" class="menu-icon">
+			<span class="nav-icon"></span>
+		</label>
+
+		<a href="" class="logo">
+			Atsmosph<span>ere</span>
+		</a>
+		<ul class="menu">
+			<li><a href="#Nebula">Nebula</a></li>
+			<li><a href="#Galaxy">Galaxy</a></li>
+			<li><a href="#Black hole">Black hole</a></li>
+
+		</ul>
+		<form action="" class="search-box">
+			<input type="text" name="search" placeholder="Search" class="search-input" required/>
+			<button type="submit">Submit</button>
+		</form>
+	</nav>
+	</header>
+	<main>
+	<div class="content">
+		<h1>Astronaut ahfuahushahdahdiahdhia</h1>
+	</div>
+
+	<section>
+		<article class="colom1" id="Nebula">
+		<h1>Nebula</h1>
+		<p>A nebula is a giant cloud of dust and gas in space. Some nebulae (more than one nebula) come from the gas and dust thrown out by the explosion of a dying star, such as a supernova.</p>
+		</article>
+	</section>
+
+		<section>
+		<article class="colom1" id="Galaxy">
+		<h1>Galaxy</h1>
+		<p>A nebula is a giant cloud of dust and gas in space. Some nebulae<br> (more than one nebula) come from the gas<br> and dust thrown out by the explosion of a dying star, such as a supernova.</p>
+		</article>
+	</section>
+
+		<section>
+		<article class="colom1" id="Black hole">
+		<h1>Black hole</h1>
+		<p>A black hole is an area of such immense gravity that nothing -- not even light -- can escape from it.</p>
+		</article>
+	</section>
+
+	<!--aside-->
+	<section>
+	<aside>	<div class="card">
+  <img src="profile.PNG" alt="lucky" style="width:100%">
+  <h1>Lucky</h1>
+  <p class="title">CEO & Founder Bank Central Asia</p>
+  <p>Harvard University</p>
+  <a href="#"><i class="fa fa-instagram"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <p><button>Contact</button></p>
+</div>
+</aside>
+</section>
+</main>
+
+<footer>
+        <p>© 2022 Dicoding</p>
+    </footer>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+        /*==scroll-progress-bar======================*/
+        let scrollPrecentage = () =>{
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round(pos * 100 / calcHeight);
+            scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+        }
+        window.onscroll = scrollPrecentage;
+        window.onload = scrollPrecentage;
+        /*--menu-btn-fixed-when-scroll============*/
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 20){
+                $('.navigation').addClass('fix-icon');
+            }
+            else{
+                $('.navigation').removeClass('fix-icon');
+            }
+        });
+        /*==popup-open==================================*/
+        $(document).on('click','.play-btn a',function(){
+            $('.play').addClass('active-popup');
+        });
+        /*==popup-Close==================================*/
+        $(document).on('click','.close-movie',function(){
+            $('.play').removeClass('active-popup');
+        });
+        /*==auto-play-when-popup-open===================*/
+        $('.play-btn a').click(function(){
+            $('#m-video')[0].play();
+        });
+        /*==Close-video-when-poppup-close==============*/
+        $('.close-movie').click(function(){
+            $('#m-video')[0].pause();
+        });
+      </script>
+
+</body>
+</html>
