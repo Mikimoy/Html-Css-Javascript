@@ -31,6 +31,7 @@ nav{
     display: flex;
     justify-content: space-around;
     padding: 25px;
+    letter-spacing: 1.8px;
 }
 
 .logo{
@@ -40,7 +41,7 @@ nav{
 }
 
 nav ul{
-    width: 300px;
+    width: 400px;
     height: 25px;
     margin-left: 20px;
     align-items: center;
@@ -83,11 +84,11 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: justify;
-    font-family: 'Satisfy', cursive;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.3rem;
     font-weight: 100;
-    
+    padding: 20px;
 }
 
 .about aside{
@@ -96,6 +97,19 @@ nav ul li a{
 }
 
 /* Services */
+.services_top p{
+    font-family: 'lobster', cursive;
+    font-weight: 100;
+    padding: 0 20px;
+}
+
+.services_top h3, h1{
+    font-family: 'Acme', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding-bottom: 3px;
+}
+
 .services_top{
     text-align: center;
     font-family: sans-serif;
@@ -153,3 +167,50 @@ footer{
 footer p{
     padding: 20px;
 }
+
+/* Hover */
+.menu ul li a {
+    background-image: linear-gradient(
+      to right,
+      #ff8800,
+      #ff8800 50%,
+      rgb(255, 255, 255) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu ul li a:before{
+    content: '';
+    background: #ff8800;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu ul li a:hover {
+   background-position: 0;
+  }
+  
+  .menu ul li a:hover::before{
+    width: 100%;
+  }
+  
+
+  /* Respownsive */
+  @media screen and (width: 1360px) {
+    .home{
+        height: 100vh;
+    }
+    
+  }
