@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Universal */
+body{
+    background-color: rgb(67, 71, 59);
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    display: flex;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+}
+
+h1, h2, h3, p, i{
+    color: antiquewhite;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-family: 'Righteous', cursive;
+    margin-right: 40%;
+}
+
+nav ul{
+    width: 300px;
+    height: 25px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li{
+
+}
+
+nav ul li a{
+    font-size: 1.2rem;
+    font-family: 'Righteous', cursive;
+    font-weight: 200;
+}
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+    /*background-image: url(/assets/img/background.jpg);*/
+    background-size: cover;
+}
+
+.home h1{
+    color: white;
+}
+
+/* About */
+.about{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.about main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.3rem;
+    font-weight: 100;
+    
+}
+
+.about aside{
+    display: flex;
+    
+}
+
+/* Services */
+.services_top{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.skills_grid{
+    padding: 30px;
+    display: grid;
+    grid-template-areas: "1 2 3 4"
+                         "5 6 7 8";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.web{
+    text-align: center;
+}
+
+.software{
+    text-align: center;
+}
+
+.game{
+    text-align: center;
+}
+
+.android{
+    text-align: center;
+}
+
+
+.experience{
+    display: grid;
+    grid-template-areas: "1 2 3 4"
+    "5 6 7 8";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+
+/* COntact */
+.contact{
+    text-align: center;
+}
+
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+footer p{
+    padding: 20px;
+}
